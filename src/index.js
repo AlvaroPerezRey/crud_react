@@ -1,24 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import Contenedor from './components/Contenedor'
 
 const element = (
   <div>
-    <Title />
-    <Welcome name={user.name}></Welcome>
-    <Definitions></Definitions>
-    <Comment author={user}></Comment>
-    <HowItWorks></HowItWorks>
+    <h1>CRUD</h1>
+    <ol>
+      <li>Crear una interfaz para una aplicación de tipo CRUD. Utilizaremos un array para almacenar los elementos y realizará las siguientes funciones.</li>
+      <ol>
+        <li><b>Crear</b>: Crear nuevos elementos</li>
+        <li><b>Leer</b>: Mostrar elementos</li>
+        <li><b>Borrar hechos</b>: Borrar elementos que están marcados como hechos</li>
+      </ol>
+    </ol>
     <hr/>
-    <Footnote id="1" description="Los componentes son reutilizables, como ves en estas notas que estamos escribiendo."></Footnote>
-    <Footnote id="2" description="Los componentes que tú crees siempre deben empezar con MAYÚSCULA, porque si empiezan por minúscula, React lo tomará como una etiqueta DOM."></Footnote>
-    <Footnote id="3" description="Los componentes, pueden formar parte de otros componentes, mira el componente Comment"></Footnote>
-    <Footnote id="4" description="Las funciones de un componente nunca deben modificar las entradas."></Footnote>
-    <Footnote id="5" description="Podemos llamar a multiples componentes dentro de un componente."></Footnote>
+    <Contenedor />
+    <hr/>
+    <h2>Para practicar:</h2>
+    <p>
+      Dar funcionalidad a los componentes <i>Crear</i>, <i>Leer</i> y al elemento <i>Borrar hechos</i>
+    </p>
   </div>
 );
 
-const App = () => (
+/*
+const element = (
   <div className='app'>
       <h1>CRUD</h1>
       <fieldset className='crud-input'>
@@ -38,15 +45,9 @@ const App = () => (
       <button className='crud-clear' type='button'>Borrar hechos</button>
   </div>
 )
+*/
 
 ReactDOM.render(
   element,
   document.getElementById('root')
 );
-
-/* contenedor 
-    crear
-    leer
-        lista
-        item
-              */
