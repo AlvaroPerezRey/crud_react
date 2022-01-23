@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Crear from './Crear'
 import Leer from './Leer'
 
-const elems = [
+const listaInicial = [
     { 
         text: 'Hacer TicTacToe', 
         done: true 
@@ -21,6 +21,20 @@ const elems = [
     }
 ];
 
+const Contenedor = () => {
+    const [elementos, setElementos] = useState(listaInicial);
+
+    return(
+        <div className="app">
+        <h1>CRUD</h1>
+        <Crear onNewTarea={elem => setElementos([elem,elementos])}></Crear>
+        <Leer elems={elementos} onElemsChange={elms => setElementos(elms)}></Leer>
+        <button className="crud-clear" type="button">Borrar</button>
+        </div>
+    );
+}
+
+/*
 const Contenedor = () => (
     <div className="app">
         <h1>CRUD</h1>
@@ -29,5 +43,6 @@ const Contenedor = () => (
         <button className="crud-clear" type="button">Borrar</button>
     </div>
 );
+*/
 
 export default Contenedor;

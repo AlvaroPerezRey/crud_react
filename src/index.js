@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Contenedor from './components/Contenedor'
 
+/*
 const element = (
   <div>
     <h1>CRUD</h1>
@@ -23,6 +24,7 @@ const element = (
     </p>
   </div>
 );
+*/
 
 /*
 const element = (
@@ -48,6 +50,6 @@ const element = (
 */
 
 ReactDOM.render(
-  element,
+  <Contenedor />,
   document.getElementById('root')
 );
