@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Listar = ({text, done, i, onDoneChange}) => (
+const Item = ({text, done, i, onDoneChange}) => (
     <li className={`crud-list__item ${done? 'crud-list__item--done':''}`}>
         <label htmlFor={`e${i}`}>
             <input id={`e${i}`} type='checkbox' checked={done} onChange={e => onDoneChange(e.target.checked)}/>
@@ -9,4 +9,4 @@ const Listar = ({text, done, i, onDoneChange}) => (
     </li> 
 );
 
-export default Listar;
+export default Item;

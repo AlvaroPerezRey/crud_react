@@ -1,13 +1,13 @@
 import React from 'react';
-import Lista from './Lista'
+import Item from './Item'
 
 const Leer = ({elems, onElemsChange}) => (
     <ul className="crud-list">
         {elems.map(({text, done}, i) => (
-            <Lista text={text} done={done} i={i} 
-                onDoneChange={value => { const updateElementos = [elems];
-                    updateElementos[i].done = value;
-                    onElemsChange(updateElementos);
+            <Item text={text} done={done} i={i} 
+                onDoneChange={value => { const updateElems = [ ...elems ];
+                    updateElems[i].done = value;
+                    onElemsChange(updateElems);
                 }
             }/>
         ))}

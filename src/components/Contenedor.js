@@ -22,14 +22,14 @@ const listaInicial = [
 ];
 
 const Contenedor = () => {
-    const [elementos, setElementos] = useState(listaInicial);
+    const [elems, setElementos] = useState(listaInicial);
 
     return(
         <div className="app">
         <h1>CRUD</h1>
-        <Crear onNewTarea={elem => setElementos([elem,elementos])}></Crear>
-        <Leer elems={elementos} onElemsChange={elms => setElementos(elms)}></Leer>
-        <button className="crud-clear" type="button">Borrar</button>
+        <Crear onNewTarea={elem => setElementos([...elems,elem])}/>
+        <Leer elems={elems} onElemsChange={elems => setElementos(elems)}/>
+        <button className="crud-clear" type="button" onClick={() => setElementos(elems.filter(elem => !elem.done))}>Borrar hechos</button>
         </div>
     );
 }
