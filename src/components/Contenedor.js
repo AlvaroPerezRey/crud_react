@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import Borrar from './Borrar';
 import Crear from './Crear'
 import Leer from './Leer'
 
@@ -29,7 +30,7 @@ const Contenedor = () => {
         <h1>CRUD</h1>
         <Crear onNewTarea={elem => setElementos([...elems,elem])}/>
         <Leer elems={elems} onElemsChange={elems => setElementos(elems)}/>
-        <button className="crud-clear" type="button" onClick={() => setElementos(elems.filter(elem => !elem.done))}>Borrar hechos</button>
+        <Borrar elems={elems} onElemsChange={elems => setElementos(elems)}/>
         </div>
     );
 }
