@@ -16,7 +16,7 @@ const Leer = ({elems, onElemsChange}) => (
                     acciones.splice(i,1)
                     onElemsChange(acciones);
                     }
-                }>Borrar elementos </button>
+                }>Borrar tarea </button>
 
             </li>
         ))}
